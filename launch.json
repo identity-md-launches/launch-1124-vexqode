@@ -1,0 +1,24 @@
+{
+  "kind": "custom_token",
+  "token": {
+    "contract": "Vexqode",
+    "name": "Vexqode",
+    "symbol": "VQI",
+    "decimals": 18,
+    "constructorArgs": [],
+    "totalSupply": "1000000000000000000000000000"
+  },
+  "contracts": [],
+  "pool": {
+    "pairedCurrency": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "fee": 3000,
+    "tickSpacing": 60,
+    "initialPrice": "125270724187523965593206900"
+  },
+  "economics": {
+    "poolBps": 8800,
+    "initialMarketCapWei": "2500000000000000000000",
+    "remainderTo": "0x6bf192ebef135e0f645e99d59d9bf44e7711606c"
+  },
+  "notes": "Vexqode (src/Vexqode.sol) is a fixed-supply ERC-20 with no constructor arguments. Its constructor mints 1,000,000,000 VQI with 18 decimals (1000000000000000000000000000 minor units) once to msg.sender, the launch factory when factory-deployed. The token has no owner, later minting, burn interface, transfer tax, pause, blacklist, or upgrade mechanism. Transfers deliver the exact requested amount. No application contracts or initialization calls are required. The pool pairs with the specified ERC-20 currency and uses a 0.3% fee with tick spacing 60. initialPrice is provenance only: floor(sqrt(initialMarketCapWei / totalSupply) * 2^96), using paired-currency minor units per VQI minor unit with VQI as currency0. The deployer derives the actual opening sqrtPriceX96 from the supplied economics and totalSupply, accounting for the deployed currencies' address ordering."
+}
